@@ -80,7 +80,7 @@ void fadeOut(int red, int green, int blue, int milliseconds)
 void fadeLightBlueToDarkPurple()
 {
   int r = 120, g = 180, b = 255;
-  for(int i = 1; i <= 10)
+  for(int i = 1; i <= 10; i++)
   {
     setLEDColor(r, g, b);
     delay(2500/10);
