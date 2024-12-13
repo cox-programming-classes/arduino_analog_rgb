@@ -85,7 +85,21 @@ void fadeLightBlueToDarkPurple()
     setLEDColor(r, g, b);
     delay(2500/10);
     r = ((80-120)/2500) * ((2500/10)*i) + 120;
-    g = ((0-180)/2500) * ((2500/10)*i) + 120;
-    r = ((90-255)/2500) * ((2500/10)*i) + 255;
+    g = ((0-180)/2500) * ((2500/10)*i) + 180;
+    b = ((90-255)/2500) * ((2500/10)*i) + 255;
   }
 }
+
+void fadeColors(int r1, int g1, int b1, int r2, int g2, int b2, int ms)
+{
+  int r = r1, g = g1, b = b1;
+  for(int i = 1; i <= 10; i++)
+  {
+    setLEDColor(r, g, b);
+    delay(ms/10);
+    r = ((r2-r1)/ms) * ((ms/10)*i) + r1;
+    g = ((g2-g1)/ms) * ((ms/10)*i) + g1;
+    b = ((b2-b1)/ms) * ((ms/10)*i) + b1;
+  }
+}
+
