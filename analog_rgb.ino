@@ -18,6 +18,7 @@ void loop()
 
   // scale the value of the reading so that it will be
   // a valid brightness for the LED.
+  /*
   int brightness = map(potValue, 0, 1023, 0, 255);
 
   analogWrite(RED_PIN, brightness);
@@ -25,7 +26,7 @@ void loop()
   analogWrite(BLUE_PIN, brightness);
 
   delay(50);
-
+  */
   int timespan = potValue * 5;
 
   fadeIn(220, 0, 255, timespan);
